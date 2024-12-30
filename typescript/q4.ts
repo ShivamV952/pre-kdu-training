@@ -5,3 +5,34 @@
 
   Export the function findById so that it can be used in the test file.
 */
+
+export enum Status {
+  Active = "Active",
+  Inactive = "Inactive",
+  Suspended = "Suspended",
+}
+
+import { User } from "./q1";
+
+export type UserStatus = [User, Status];
+
+export function printUserStatus(userStatus: UserStatus): void {
+  const [user, status] = userStatus;
+  console.log(`${user.name} is currently ${status}.`);
+}
+
+export function filterArray<T>(arr: T[], predicate: (item: T) => boolean): T[] {
+  return arr.filter(predicate);
+}
+
+export function findById(
+  users: User[],
+  id: number,
+  throwOnError: boolean = false
+): User | undefined {
+  const user = users.find((user) => user.id === id);
+  if (!user && throwOnError) {
+    throw new Error(`User with ID ${id} not found`);
+  }
+  return user;
+}
