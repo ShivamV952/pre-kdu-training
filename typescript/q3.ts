@@ -5,3 +5,22 @@
 
   Export the filterArray function so that the code can be tested in the test file.
 */
+
+export enum Status {
+  Active = "Active",
+  Inactive = "Inactive",
+  Suspended = "Suspended",
+}
+
+import { User } from "./q1";
+
+export type UserStatus = [User, Status];
+
+export function printUserStatus(userStatus: UserStatus): void {
+  const [user, status] = userStatus;
+  console.log(`${user.name} is currently ${status}.`);
+}
+
+export function filterArray<T>(arr: T[], predicate: (item: T) => boolean): T[] {
+  return arr.filter(predicate);
+}
