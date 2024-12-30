@@ -1,11 +1,135 @@
-<!-- 
-Use headings and paragraphs to divide different sections of the website.
-Use tables to explain your educational qualification.
-Add images for your projects and yourself
-Use HTML lists to talk about your skills 
-Use Links to Navigate to your LinkedIn or GitHub profiles.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Shivam's Portfolio</h1>
+        <p>Passionate Developer | Lifelong Learner | Innovator</p>
+      </div>
+    </header>
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <section id="about-me">
+          <h2>About Me</h2>
+          <article>
+            <p>
+              Hello! I'm Shivam, a passionate developer and lifelong learner. I
+              specialize in creating software solutions that make life easier
+              and continuously strive to improve my skills in the ever-evolving
+              tech world.
+            </p>
+          </article>
+        </section>
 
-Style the entire webpage according to your creativity
-Use all these ways of adding style to your webpage.
-Use CSS selectors when styling your lists and tables.
--->
+        <section id="education">
+          <h2>Educational Qualifications</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>B.Tech in Computer Science</td>
+                <td>IIIT Lucknow</td>
+                <td>2025</td>
+              </tr>
+              <tr>
+                <td>Class XII</td>
+                <td>Kendriya Vidyalaya NER Bareilly</td>
+                <td>2020</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="project">
+            <h3>BargainBay</h3>
+            <p>
+              Developed a specialized virtual marketplace website for reselling
+              various items. Integrating AI and Blockchain technologies. This
+              specialized virtual marketplace offers video calling and chat
+              facilities alongside seamless reselling. Designed to address
+              industry shortcomings, providing a user-friendly interface
+              connecting sellers and buyers efficiently.
+            </p>
+            <p>
+              <strong>Tech Stack:</strong> ReactJs, NextJs, Google Gemini AI,
+              Blockchain, Tailwind CSS, Supabase
+            </p>
+            <p>
+              <a href="https://www.bargainbay.site/" target="_blank">Deployed Link</a>
+            </p>
+            <!-- <img src="images/faculty_recruitment.png" alt="Faculty Recruitment Portal Screenshot"> -->
+          </div>
+          <div class="project">
+            <h3>DrugWise</h3>
+            <p>
+              A comprehensive portal created using Next.js and Sanity CMS,
+              providing detailed drug-related information.
+            </p>
+            <p>
+              <strong>Tech Stack:</strong> Next.js, Sanity CMS, Tailwind CSS
+            </p>
+            <p>
+              <a href="https://drugwise.vercel.app/" target="_blank">Deployed Link</a>
+              <!-- <a href="https://github.com/shivam/drugwise" target="_blank">View on GitHub</a> -->
+            </p>
+            <!-- <img src="images/drugwise.png" alt="DrugWise Project Screenshot"> -->
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>
+              <strong>Programming Languages:</strong> JavaScript, Python, C++
+            </li>
+            <li><strong>Frameworks:</strong> Next.js, Flutter</li>
+            <li><strong>Tools:</strong> Git, Supabase, Sanity CMS</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Connect with Me</h2>
+          <p>
+            <a href="https://www.linkedin.com/in/shivamv952" target="_blank">LinkedIn</a>
+            |
+            <a href="https://github.com/ShivamV952" target="_blank">GitHub</a>
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Shivam. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
