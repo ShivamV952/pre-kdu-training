@@ -1,14 +1,54 @@
-<!-- 
-Create a webpage with a simple calculator
-Create two fields to take input of two numbers
-Create 4 buttons to perform 4 operations - Add, Subtract, Divide, Multiply
-Alert the result based on the button that was clicked.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <script>
+      function calculate(operation) {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
 
-Make sure the input fields have an id of num1 and num2
-Make sure the “Add” button has an id of add
-Make sure the “Subtract” button has an id of subtract
-Make sure the “Multiply” button has an id of multiply
-Make sure the “Divide” button has an id of divide
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("Please enter valid numbers");
+          return;
+        }
 
-The IDs should match or else the tests will fail.
- -->
+        let result;
+        switch (operation) {
+          case "add":
+            result = num1 + num2;
+            break;
+          case "subtract":
+            result = num1 - num2;
+            break;
+          case "multiply":
+            result = num1 * num2;
+            break;
+          case "divide":
+            if (num2 === 0) {
+              alert("Cannot divide by zero");
+              return;
+            }
+            result = num1 / num2;
+            break;
+        }
+
+        alert(`Result: ${result}`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <br /><br />
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" placeholder="Enter second number" />
+    <br /><br />
+    <button id="add" onclick="calculate('add')">Add</button>
+    <button id="subtract" onclick="calculate('subtract')">Subtract</button>
+    <button id="multiply" onclick="calculate('multiply')">Multiply</button>
+    <button id="divide" onclick="calculate('divide')">Divide</button>
+  </body>
+</html>
